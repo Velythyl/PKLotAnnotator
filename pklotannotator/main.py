@@ -331,12 +331,11 @@ def tree_aggregate(dataset_root):
 
 
 if __name__ == "__main__":
-    dataset_root = "/home/charlie/Downloads/parking-lot-dataset/PKLot/PKLot"
+    dataset_root = "/home/<user>/Downloads/parking-lot-dataset/PKLot/PKLot" # the subdirectories here are ["PUCPR", "UFPR04", "UFPR05"]
 
     cleanup(dataset_root)
 
     tree_predict(dataset_root)
-    #exit()
 
     tree_xml_to_npz(dataset_root)
 
