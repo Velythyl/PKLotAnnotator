@@ -1,0 +1,7 @@
+ultralytics
+seaborn
+six
+torch
+torchvision
+triton
+matplotlib
