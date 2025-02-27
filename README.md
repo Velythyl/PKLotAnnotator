@@ -2,6 +2,12 @@
 
 Annotates the Blanderbuss PKLot dataset - https://www.kaggle.com/datasets/blanderbuss/parking-lot-dataset
 
+# Results
+
+https://drive.google.com/file/d/14cC6ImPnSSKLzv1aTg4p-Y7CJOkNC2jL/view?usp=sharing
+
+# Process
+
 1. Runs YOLOv8 on all images. Saves the images with predicted classes and bounding boxes with the `<imagepath>-pred.<ext>` suffix.
 2. For each detection, compares the detected bounding box with the ground truth bounding box found in `<imagepath>.xml`. When a detection is found, counts as a positive presence; otherwise, missed detections count as non-detected presences. These results are saved as `<imagepath>-pred.xml`
 3. For each XML, makes an equivalent `<imagepath>.npz` and `<imagepath>-pred.npz`. The first element of each vector in the matrix is the UNIX timestamp equivalent of `<imagepath>`. The other elements are the parking lot spots and their detections (1 if detected, 0 otherwise).
